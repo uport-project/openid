@@ -1,4 +1,4 @@
-import { Home, Dashboard } from './pages'
+import { Home } from './pages'
 import { UserIsAuthenticated, NavBar } from './util'
 
-export { Home, Dashboard, NavBar, UserIsAuthenticated }
+export { Home, NavBar, UserIsAuthenticated }

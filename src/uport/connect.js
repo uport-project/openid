@@ -23,7 +23,10 @@ import { Connect } from 'uport-connect'
  * 
  */
 
-export const uport = new Connect('Truffle Box', {
+
+ //Read data from URL
+
+export const uport = new Connect('uPort OpenId-Connect Helper', {
   // Connect Options:
   
 })
