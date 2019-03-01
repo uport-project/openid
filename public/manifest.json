@@ -1,6 +1,6 @@
 {
-  "short_name": "uPort Box",
-  "name": "React, uPort, and Truffle Boilerplate",
+  "short_name": "uPort OIDC Helper",
+  "name": "uPort OpenID-Connect Helper",
   "icons": [
     {
       "src": "favicon.ico",
