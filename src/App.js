@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Switch, Route } from 'react-router'
 
-import { Home, NavBar } from './components'
+import { Home, Authorize, NavBar } from './components'
 import { uport, handleDisclosure } from './uport'
 
 // Styles
@@ -19,6 +19,7 @@ const App = ({restoreUserData, loggedIn}) => {
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/authorize" component={Authorize} />
         </Switch>
       </main>
     </div>

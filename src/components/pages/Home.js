@@ -1,18 +1,14 @@
-import React from 'react'
-
-import LoginButton from '../util/LoginButton'
+import React from 'react';
 
 const Home = () => {
-
-
-  return (
-    <div>
+    return (
       <div>
-        <h1>Please login with uPort</h1>
-        <p><LoginButton /></p>
+        <div>
+          <h1>uPort OpenID-Connect Helper</h1>
+          <p></p>
+        </div>
       </div>
-    </div>
-  )
+    )
 }
 
 export default Home
