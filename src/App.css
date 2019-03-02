@@ -1,176 +1,33 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
 }
 
-main {
-  margin: 2rem 0 0 0;
-  padding: 1em 10%;
-  font-size: 14pt;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
 }
 
-/* Background image */
-main::before {
-  content: "";
-  position: fixed;
-  top: 0; 
-  left: 0; 
-  height: 100%; 
-  width: 100%;
-  
-  background-image: url('./assets/img/fingerprints.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-@media screen and (max-width: 900px) {
-  main::before {
-    width: 900px;
-  }
-}
-
-a {
-  color: #000;
-  font-weight: bold;
-  font-family: inherit;
-}
-
-/* Navigation Bar */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2rem;
-  padding: 0.25em 5%;
-  background-color: #5c50ca;
-  border-bottom: 1px solid #aaa;
-  box-shadow: 1px 1px 2px #aaa;
-  color: #fff;
-}
-
-nav > a > div,
-nav > a > img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#logo {
-  height: 1em;
-  width: 1em;
-  margin: 0.25em 0.5em;
-}
-
-/* Navigation links */
-nav a, nav a:visited {
-  color: #fff;
-  font-size: 16pt;
-  text-decoration: none;
-}
-
-nav > ul {
-  position: absolute;
-  top: 0;
-  right: 15%;
-  height: 100%;
-  width: 50%;
-  margin: 0;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-nav > ul > * {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+.App-link {
+  color: #61dafb;
 }
 
-button {
-  cursor: pointer;
-  padding: 0.25em 0.5em;
-  border: 1px solid #aaa;
-  border-radius: 0.25em;
-  background-color: #fff;
-  box-shadow: none;
-  font-size: 1em;
-  color: #5c50ca;
-}
-
-h1, h2, h3 {
-  font-family: 'Avenir', 'Open Sans', sans-serif;
-}
-
-code { 
-  background: #eee;
-  color: #900;
-  border: 1px solid #aaa;
-  border-radius: 0.25em;
-  padding: 0.1em 0.25em;
-}
-
-pre {
-  display: block;
-  margin: 20px 0 15px 0;
-  padding: 10px;
-  background: #eee;
-}
-
-pre code {
-  border: none;
-}
-
-li {
-  list-style: none;
-}
-
-.container {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 45px 20px;
-}
-
-.card {
-  padding: 0.5em;
-  margin: 0.5em;
-  overflow: hidden;
-  border: 1px solid #aaa;
-  border-radius: 0.25em;
-  background-color: white;
-  box-shadow: 1px 1px 2px #aaa;
-}
-
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  padding: 5px;
-  background: #0c1a2b;
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
-}
-
-.navbar a {
-  color: #fff;
-}
-
-.navbar a:active,
-.navbar a:focus,
-.navbar a:hover {
-  background: #233e5e;
-}
-
-.navbar .pure-menu-heading {
-  font-weight: bold;
-  text-transform: none;
-}
-
-.navbar .navbar-right {
-  float: right;
-}
-
-.navbar .uport-logo {
-  height: 16px;
-  margin-right: 10px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

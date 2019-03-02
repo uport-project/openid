@@ -1,38 +1,42 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Switch, Route } from 'react-router'
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import { Home, Authorize, NavBar } from './components'
-import { uport, handleDisclosure } from './uport'
+import logo from './logo.svg';
+import './App.css';
 
-// Styles
-import './App.css'
-import './assets/css/open-sans.css'
+import Authorize from './Authorize';
 
-// Protect dashboard page with login
-const App = ({restoreUserData, loggedIn}) => {
-  // Auto-login if credentials are cached in localStorage
-  if (!loggedIn && uport.did) restoreUserData(uport.state)
+function App() {
   return (
-    <div>
-      <NavBar />
-      <main>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/authorize" component={Authorize} />
-        </Switch>
-      </main>
-    </div>
-  )
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route path="/openid/authorize" component={Authorize} />
+      </div>
+    </Router>
+  );
 }
 
-export default connect(
-  // mapStateToProps
-  (state) => ({
-    loggedIn: !!state.user.data
-  }),
-  // mapDispatchToProps
-  (dispatch) => ({
-    restoreUserData: handleDisclosure(dispatch)
-  })
-)(App)
+function Home() {
+  return (
+    <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+  );
+}
+
+
+export default App;
